@@ -7,7 +7,6 @@ import { UsePageState } from '~/context/pageContext'
 import styled from '@emotion/styled'
 import { breakpoints, colors } from '../../utils/styles'
 import { CartCounter, Container, MenuLinkTitle, MenuLink, NavList, NavListItem, ThreeDotButton } from './styles'
-import useDebounce from './useDebounce';
 
 const useQuantity = () => {
   const {
@@ -33,11 +32,11 @@ const Navigation = ({ siteTitle }) => {
     }
     window.addEventListener("scroll", handleScroll)
 
-    if (Page === "cart") {
-      setNavActive(false)
+    if (Page === "home") {
+      setNavActive(true)
     }
     else {
-      setNavActive(true)
+      setNavActive(false)
     }
 
     return () => window.removeEventListener("scroll", handleScroll);

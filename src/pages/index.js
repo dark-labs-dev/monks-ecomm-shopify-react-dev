@@ -7,7 +7,7 @@ import { UsePageDispatch } from '~/context/pageContext'
 function PageCheck() {
   const PageDispatch = UsePageDispatch()
   useEffect(() => {
-    PageDispatch({ type: 'UpdatePage', payload: 'page' })
+    PageDispatch({ type: 'UpdatePage', payload: "home" })
   }, [])
   return (<>
   </>)

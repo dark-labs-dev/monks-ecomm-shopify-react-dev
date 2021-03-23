@@ -1,7 +1,6 @@
 import React, { useContext } from 'react'
 
 import StoreContext from '~/context/StoreContext'
-import { UsePageDispatch } from '~/context/pageContext'
 import LineItem from './LineItem'
 
 const Cart = () => {

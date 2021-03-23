@@ -5,7 +5,7 @@ import styled from '@emotion/styled'
 
 import ContextProvider from '~/provider/ContextProvider'
 
-import { UsePageDispatch, PageProvider } from '~/context/pageContext'
+import { PageProvider } from '~/context/pageContext'
 
 import { GlobalStyle } from '~/utils/styles'
 import Navigation from '~/components/Navigation'
@@ -15,8 +15,7 @@ import Navigation from '~/components/Navigation'
 const Wrapper = styled.div`
   margin: 0 auto;
   max-width: 960px;
-  margin-top:350px;
-  `
+`
 
 const Footer = styled.div`
   display:flex;

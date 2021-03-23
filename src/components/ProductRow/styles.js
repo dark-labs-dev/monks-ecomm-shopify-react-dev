@@ -4,6 +4,7 @@ export const GridRow = styled.div`
   display: grid;
   grid-template-column: repeat(1, 1fr);
   gap: 2.5rem;
+  padding-top:350px;
 `
 
 export const Product = styled.div`

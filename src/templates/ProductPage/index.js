@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { graphql } from 'gatsby'
 
 import SEO from '~/components/seo'
@@ -13,6 +13,16 @@ import {
 import StoreContext from '~/context/StoreContext'
 import { ProductTitle, ProductDescription } from './styles'
 import InfoUi from '~/components/infoUi'
+import { UsePageDispatch } from '~/context/pageContext'
+
+function PageCheck() {
+  const PageDispatch = UsePageDispatch()
+  useEffect(() => {
+    PageDispatch({ type: 'UpdatePage', payload: "product" })
+  }, [])
+  return (<>
+  </>)
+}
 
 const ProductPage = ({ data }) => {
   const product = data.shopifyProduct
@@ -32,6 +42,7 @@ const ProductPage = ({ data }) => {
   return (
     <>
       <SEO title={product.title} description={product.description} />
+      <PageCheck pagePay="product" />
       <Container>
         <TwoColumnGrid>
 

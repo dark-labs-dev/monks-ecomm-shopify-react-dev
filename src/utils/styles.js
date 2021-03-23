@@ -111,6 +111,7 @@ export const Img = styled(Image)`
 
 export const Container = styled.div`
   max-width: 960px;
+  padding-top:80px;
 `
 
 export const CartContainer = styled.div`
