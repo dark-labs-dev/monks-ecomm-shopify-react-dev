@@ -59,8 +59,7 @@ const Navigation = ({ siteTitle }) => {
         < MenuLinkTitle to="/">{siteTitle}</MenuLinkTitle>
         {navActive ?
           <>
-            Shop
-          <NavList>
+            <NavList>
               Info
               <NavListItem>1545 W Sunset Boulevard</NavListItem>
               <NavListItem>Los Angeles, California</NavListItem>
