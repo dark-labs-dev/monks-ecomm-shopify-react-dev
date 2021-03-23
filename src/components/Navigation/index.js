@@ -60,12 +60,12 @@ const Navigation = ({ siteTitle }) => {
           <>
             <NavList>
               Info
-              <NavListItem>1545 W Sunset Boulevard</NavListItem>
+              <NavListItem>1010 W Boulevard</NavListItem>
               <NavListItem>Los Angeles, California</NavListItem>
               <NavListItem>90026 – 3333</NavListItem>
-              <NavListItem>information@marta.la</NavListItem>
-              <NavListItem>+1 323 775 6811</NavListItem>
-              <NavListItem>@marta.losangeles</NavListItem>
+              <NavListItem>information@https://monksearth.com/</NavListItem>
+              <NavListItem>+1 323 111 1111</NavListItem>
+              <NavListItem>@monks</NavListItem>
               <NavListItem>Subscribe to newsletter</NavListItem>
               <NavListItem>Terms & Shipping </NavListItem>
             </NavList>

@@ -39,6 +39,7 @@ export const DescriptionTextContainer = styled.div`
 }`
 
 export const DescriptionText = styled.div`
+font-size:.7em;
 
 }`
 
