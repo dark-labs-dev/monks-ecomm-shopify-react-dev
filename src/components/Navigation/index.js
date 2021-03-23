@@ -26,7 +26,7 @@ const Navigation = ({ siteTitle }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if ((typeof window !== "undefined") && (Page !== "cart")) {
+      if ((typeof window !== "undefined") && (Page === "home")) {
         setNavActive(window.pageYOffset <= 1 && true)
       }
     }
