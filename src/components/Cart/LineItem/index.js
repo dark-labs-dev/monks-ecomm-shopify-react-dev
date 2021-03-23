@@ -6,6 +6,7 @@ import { Wrapper } from './styles'
 
 const LineItem = props => {
   const { item } = props
+  console.log(item)
   const {
     removeLineItem,
     store: { client, checkout },
@@ -29,19 +30,27 @@ const LineItem = props => {
     removeLineItem(client, checkout.id, item.id)
   }
 
+  const getPrice = price =>
+    Intl.NumberFormat(undefined, {
+      currency: checkout.currencyCode ? checkout.currencyCode : 'EUR',
+      minimumFractionDigits: 2,
+      style: 'currency',
+    }).format(parseFloat(price ? price : 0))
+
   return (
     <Wrapper>
       {/* {console.log(item)} */}
       <Link to={`/product/${item.variant.product.handle}/`}>
         {variantImage}
       </Link>
-      <p>
-        {item.title}
+      {/* 
+        <p>
+       {item.title}
         {`  `}
         {item.variant.title === !'Default Title' ? item.variant.title : ''}
       </p>
-      {selectedOptions}
-      {item.quantity}
+      {selectedOptions} */}
+      {getPrice(item.quantity * item.variant.price)}
       <button onClick={handleRemove}>Remove</button>
     </Wrapper>
   )

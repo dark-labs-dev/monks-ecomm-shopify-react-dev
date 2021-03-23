@@ -45,7 +45,7 @@ const Navigation = ({ siteTitle }) => {
   const Wrapper = styled.div`
   background: ${colors.background};
   margin-bottom: 1.45rem;
-  position:${navActive ? "absolute" : "fixed"};
+  position:fixed;
   z-index:2;
   width:calc(100% - 2rem);
   border-bottom:solid 1px #fff;
@@ -63,7 +63,7 @@ const Navigation = ({ siteTitle }) => {
               <NavListItem>1010 W Boulevard</NavListItem>
               <NavListItem>Los Angeles, California</NavListItem>
               <NavListItem>90026 – 3333</NavListItem>
-              <NavListItem>information@https://monksearth.com/</NavListItem>
+              <NavListItem>info@monksearth.com</NavListItem>
               <NavListItem>+1 323 111 1111</NavListItem>
               <NavListItem>@monks</NavListItem>
               <NavListItem>Subscribe to newsletter</NavListItem>
