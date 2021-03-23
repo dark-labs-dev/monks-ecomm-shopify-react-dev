@@ -20,7 +20,7 @@ export const GlobalStyle = props => (
       body {
         margin: 0;
         background:#d6cf8c;
-        padding:0 1rem;
+        padding: 0 1rem;
       }
       html {
         font-family: MonumentGrotesk-Regular;
@@ -110,7 +110,6 @@ export const Img = styled(Image)`
 `
 
 export const Container = styled.div`
-  margin: 0 auto;
   max-width: 960px;
 `
 

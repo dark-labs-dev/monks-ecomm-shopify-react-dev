@@ -48,7 +48,7 @@ const Navigation = ({ siteTitle }) => {
   margin-bottom: 1.45rem;
   position:${navActive ? "absolute" : "fixed"};
   z-index:2;
-  width:calc(100vw - 2.75rem);
+  width:calc(100% - 2rem);
   border-bottom:solid 1px #fff;
   top: 0;
 `
