@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'MonumentGrotesk-Medium';
+    src: url('./ABCMonumentGrotesk-Medium.woff2') format('woff2'),
+         url('./ABCMonumentGrotesk-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MonumentGrotesk-Regular';
+    src: url('./ABCMonumentGrotesk-Regular.woff2') format('woff2'),
+         url('./ABCMonumentGrotesk-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MonumentGrotesk-Bold';
+    src: url('./ABCMonumentGrotesk-Bold.woff2') format('woff2'),
+         url('./ABCMonumentGrotesk-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MonumentGrotesk-MediumItalic';
+    src: url('./ABCMonumentGrotesk-MediumItalic.woff2') format('woff2'),
+         url('./ABCMonumentGrotesk-MediumItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MonumentGrotesk-RegularItalic';
+    src: url('./ABCMonumentGrotesk-RegularItalic.woff2') format('woff2'),
+         url('./ABCMonumentGrotesk-RegularItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MonumentGrotesk-BoldItalic';
+    src: url('./ABCMonumentGrotesk-BoldItalic.woff2') format('woff2'),
+         url('./ABCMonumentGrotesk-BoldItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
