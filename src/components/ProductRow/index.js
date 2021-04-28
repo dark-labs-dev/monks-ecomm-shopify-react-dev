@@ -73,8 +73,6 @@ const ProductRow = () => {
     `
     )
 
-
-
     const getPrice = price =>
         Intl.NumberFormat(undefined, {
             currency: checkout.currencyCode ? checkout.currencyCode : 'EUR',

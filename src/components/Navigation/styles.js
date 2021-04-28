@@ -5,16 +5,22 @@ import { breakpoints, colors } from '../../utils/styles'
 
 export const Container = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: baseline;
-  padding: 1rem 0;
+  padding: 1rem;
   margin: 0 auto;
+  width:92vw;
 `
 
 export const MenuLink = styled(Link)`
 font-weight: bold;
 text-align:right;
+display:flex;
 @media (max-width: ${breakpoints.s}px) {
+flex-direction: column;
+}
+&:hover {
+  color:black;
 }
 `
 export const MenuLinkTitle = styled(Link)`
@@ -22,7 +28,9 @@ text-decoration: none;
     font-family:MonumentGrotesk-Medium;
   @media (max-width: ${breakpoints.s}px) {
   }
-  `
+  &:hover {
+    color:black;
+  } `
 
 export const CartCounter = styled.span`
   float: right;
@@ -44,4 +52,8 @@ export const ThreeDotButton = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+`
+
+export const MidContainer = styled.div`
+  width:20vw;
 `

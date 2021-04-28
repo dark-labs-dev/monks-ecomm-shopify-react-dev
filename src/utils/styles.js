@@ -11,7 +11,9 @@ export const breakpoints = {
   xl: 1200,
 }
 export const colors = {
-  background: "#d6cf8c"
+  background: "#CAB64B",
+  color0: "#CAB64B",
+  color1: "#CAB64B"
 }
 export const GlobalStyle = props => (
   <Global
@@ -19,14 +21,16 @@ export const GlobalStyle = props => (
     styles={css`
       body {
         margin: 0;
-        background:#d6cf8c;
-        padding: 0 1rem;
+        background:#fff;
+        // padding: 0 1rem;
+        width:100vw;
       }
       html {
         font-family: MonumentGrotesk-Regular;
         -ms-text-size-adjust: 100%;
         -webkit-text-size-adjust: 100%;
         min-height:100vh;
+        width:100%;
       }
       
       a {
@@ -34,7 +38,10 @@ export const GlobalStyle = props => (
         color:#fff;
         text-decoration: underline;
         &:hover {
-        color:#00000090;
+        color:${colors.color1};
+        }
+        @media (max-width: ${breakpoints.s}px) {
+          font-size: .8rem;
         }
       }
       
@@ -76,7 +83,7 @@ export const GlobalStyle = props => (
         background:transparent;
         text-decoration:underline;  
          &:hover {
-            color: white;
+            color: ${colors.color1};
           }
     
       }

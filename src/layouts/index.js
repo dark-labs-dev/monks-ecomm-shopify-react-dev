@@ -11,7 +11,6 @@ import { GlobalStyle } from '~/utils/styles'
 import Navigation from '~/components/Navigation'
 
 
-
 const Wrapper = styled.div`
   margin: 0 auto;
   max-width: 960px;
@@ -50,11 +49,11 @@ const Layout = ({ children }) => {
               <Wrapper>
                 {children}
               </Wrapper>
-              <Footer>
+              {/* <Footer>
                 <FooterImg src="https://cdn.shopify.com/s/files/1/0535/8456/0308/files/monksLogoUdateLast.svg?v=1615055671" />
                 © {new Date().getFullYear()}
                 {` `}
-              </Footer>
+              </Footer> */}
             </>
           )}
         />

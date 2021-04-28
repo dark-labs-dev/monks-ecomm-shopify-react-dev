@@ -1,10 +1,18 @@
 import styled from '@emotion/styled'
+import { breakpoints, colors } from '../../utils/styles'
 
 export const GridRow = styled.div`
   display: grid;
   grid-template-column: repeat(1, 1fr);
   gap: 2.5rem;
-  padding-top:350px;
+  padding:0 1rem;
+  padding-top:250px;
+  @media (max-width: ${breakpoints.l}px) {
+  padding: 250px  1rem 0 1rem;
+  }
+  @media (max-width: ${breakpoints.s}px) {
+    padding: 300px  1rem 0 1rem;
+    }
 `
 
 export const Product = styled.div`
@@ -54,7 +62,7 @@ export const TextToggle = styled.button`
   margin:.5rem 0;
   padding:0;
   &:hover{
-    color:#fff;
+    color:${colors.color1};
   }`
 
 export const DotToggle = styled.span`
