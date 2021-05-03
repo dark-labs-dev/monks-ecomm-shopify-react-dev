@@ -73,6 +73,7 @@ const ContextProvider = ({ children }) => {
 
   return (
     <Context.Provider
+      style={{ "background": "blue" }}
       value={{
         store,
         addVariantToCart: async (variantId, quantity) => {

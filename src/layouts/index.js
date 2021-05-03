@@ -16,8 +16,8 @@ const Wrapper = styled.div`
   max-width: 1010px;
   padding: 0 auto;
   position: relative;
-  padding: 0 1rem;
-  width: calc(100vw - 2rem);
+  padding: 0;
+  width: 100%;
 `
 
 const Footer = styled.div`

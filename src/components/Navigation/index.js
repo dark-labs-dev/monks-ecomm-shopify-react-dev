@@ -6,7 +6,7 @@ import StoreContext from '~/context/StoreContext'
 import { UsePageState } from '~/context/pageContext'
 import styled from '@emotion/styled'
 import { breakpoints, colors } from '../../utils/styles'
-import { CartCounter, Container, MidContainer, MenuLinkTitle, MenuLink, NavList, NavListItem, ThreeDotButton } from './styles'
+import { CartCounter, Container, StartContainer, MidContainer, EndContainer, MenuLinkTitle, MenuLink, NavList, NavListItem, ThreeDotButton } from './styles'
 import LifeLogo from './lifeLogo'
 
 const useQuantity = () => {
@@ -44,35 +44,28 @@ const Navigation = ({ siteTitle }) => {
   }, [Page]);
 
   const Wrapper = styled.div`
-  background: ${colors.background};
-  margin-bottom: 1.45rem;
-  position:fixed;
-  z-index:2;
-  width:100vw;
-  top: 0;
-  max-height:250px;
-  `
-
-  const TitleContainer = styled.div`
-  height:100%;
-  display:flex;
-  flex-direction:column;
-  justify-content:space-evenly;
+    background: ${colors.background};
+    margin-bottom: 1.45rem;
+    position:fixed;
+    z-index:2;
+    top: 0;
+    max-height:250px;
+    // width:calc(100% - 1rem);
+    width:100%;
   `
 
   return (
     <Wrapper >
       <Container>
-        <TitleContainer>
+        <StartContainer>
           < MenuLinkTitle to="/">INNOVATION INSPIRED BY NATURE</MenuLinkTitle>
           <LifeLogo />
-        </TitleContainer>
-        <MidContainer>
+        </StartContainer>
 
+        <MidContainer>
           < MenuLinkTitle to="/about">
             About
         </MenuLinkTitle>
-
           {navActive ?
             <>
               <NavList>
@@ -89,10 +82,14 @@ const Navigation = ({ siteTitle }) => {
           </ThreeDotButton>
           }
         </MidContainer>
-        <MenuLink to="/cart">
-          {hasItems && <CartCounter>{quantity}</CartCounter>}
+
+        <EndContainer>
+          <MenuLink to="/cart">
+            {hasItems && <>{`${quantity} — `}</>}
           Bag
         </MenuLink>
+        </EndContainer>
+
       </Container>
     </Wrapper >
   )

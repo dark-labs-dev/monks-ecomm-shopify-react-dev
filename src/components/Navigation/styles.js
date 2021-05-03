@@ -7,11 +7,11 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  padding: 1rem;
   margin: 0 auto;
-  width:92vw;
   max-width: 1010px;
-`
+  overflow-x:hidden;
+  padding:0 1rem 0 1rem;
+  `
 
 export const MenuLink = styled(Link)`
 font-weight: bold;
@@ -29,16 +29,12 @@ export const MenuLinkTitle = styled(Link)`
   text-decoration: none;
     font-family:MonumentGrotesk-Medium;
   @media (max-width: ${breakpoints.s}px) {
+    font-size:.75rem;
   }
   &:hover {
     color:black;
   } `
 
-export const CartCounter = styled.span`
-  float: right;
-  z-index: 20;
-  padding:0 1rem;
-`
 
 export const NavList = styled.ul`
   padding:0;
@@ -48,7 +44,6 @@ export const NavList = styled.ul`
 export const NavListItem = styled.li`
   line-height:1.5rem;
   @media (max-width: ${breakpoints.s}px) {
-    line-height:1rem;
   } 
 `
 
@@ -60,6 +55,21 @@ export const ThreeDotButton = styled.div`
   justify-content: start;
 `
 
+export const StartContainer = styled.div`
+  height:100%;
+  width:50%;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-evenly;
+  padding-right: 1rem;
+}`
+
 export const MidContainer = styled.div`
-  width:20vw;
+  width:40%;
+`
+export const EndContainer = styled.div`
+  display:flex;
+  justify-content:flex-end;
+  width:10%;
+  text-align:right;
 `

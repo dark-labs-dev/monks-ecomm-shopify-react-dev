@@ -19,20 +19,20 @@ export const GlobalStyle = props => (
   <Global
     {...props}
     styles={css`
-      body {
+    html {
+      font-family: MonumentGrotesk-Regular;
+      background:#fff;
+      overflow-x:hidden;
+      max-width:100%;
+      min-height:100vh; 
+     }
+
+    body {
         margin: 0;
-        background:#fff;
-        // padding: 0 1rem;
-        max-width:100vw;
-        overflow-x:hidden;
-      }
-      html {
-        font-family: MonumentGrotesk-Regular;
-        -ms-text-size-adjust: 100%;
-        -webkit-text-size-adjust: 100%;
-        min-height:100vh;
         width:100%;
+        height:100%;    
       }
+
       
       a {
         font-family: MonumentGrotesk-Regular;
@@ -119,7 +119,7 @@ export const Img = styled(Image)`
 
 export const Container = styled.div`
   // max-width: 960px;
-  margin-top: 250px;
+  margin-top: 150px;
   height: calc(100vh - 150px);
   display: flex;
   justify-content: center;
@@ -127,7 +127,7 @@ export const Container = styled.div`
   flex-direction: column;
   @media (max-width: ${breakpoints.l}px) {
     padding:0 1rem;
-  }
+}
 `
 
 export const CartContainer = styled.div`
