@@ -5,17 +5,19 @@ import { breakpoints, colors } from '../../utils/styles'
 
 export const Container = styled.div`
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: baseline;
   padding: 1rem;
   margin: 0 auto;
   width:92vw;
+  max-width: 1010px;
 `
 
 export const MenuLink = styled(Link)`
 font-weight: bold;
 text-align:right;
 display:flex;
+text-decoration: none;
 @media (max-width: ${breakpoints.s}px) {
 flex-direction: column;
 }
@@ -24,7 +26,7 @@ flex-direction: column;
 }
 `
 export const MenuLinkTitle = styled(Link)`
-text-decoration: none;
+  text-decoration: none;
     font-family:MonumentGrotesk-Medium;
   @media (max-width: ${breakpoints.s}px) {
   }
@@ -50,8 +52,8 @@ export const NavListItem = styled.li`
 export const ThreeDotButton = styled.div`
   cursor:pointer;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: left;
+  justify-content: start;
 `
 
 export const MidContainer = styled.div`

@@ -13,7 +13,11 @@ import Navigation from '~/components/Navigation'
 
 const Wrapper = styled.div`
   margin: 0 auto;
-  max-width: 960px;
+  max-width: 1010px;
+  padding: 0 auto;
+  position: relative;
+  padding: 0 1rem;
+  width: calc(100vw - 2rem);
 `
 
 const Footer = styled.div`

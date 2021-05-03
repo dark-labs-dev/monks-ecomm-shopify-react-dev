@@ -23,7 +23,8 @@ export const GlobalStyle = props => (
         margin: 0;
         background:#fff;
         // padding: 0 1rem;
-        width:100vw;
+        max-width:100vw;
+        overflow-x:hidden;
       }
       html {
         font-family: MonumentGrotesk-Regular;
@@ -117,16 +118,24 @@ export const Img = styled(Image)`
 `
 
 export const Container = styled.div`
-  max-width: 960px;
-  padding-top:80px;
+  // max-width: 960px;
+  margin-top: 250px;
+  height: calc(100vh - 150px);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  @media (max-width: ${breakpoints.l}px) {
+    padding:0 1rem;
+  }
 `
 
 export const CartContainer = styled.div`
   margin: 0 auto;
-  max-width: 960px;
+  max-width: 1010px;
   min-height:calc(100vh - 140px);
   margin-top:80px;
-'
+  padding: auto 1rem;
 `
 
 export const TwoColumnGrid = styled.div`
@@ -134,6 +143,7 @@ export const TwoColumnGrid = styled.div`
   grid-template-columns: 1fr 2rem 1fr;
   grid-template-rows: 1auto;
   grid-template-areas: 'left . right';
+  width: 100%;
 
   @media (max-width: ${breakpoints.l}px) {
     display: block;
