@@ -9,8 +9,8 @@ const AboutPage = styled.div`
   display: grid;
   grid-template-column: repeat(1, 1fr);
   gap: 2.5rem;
-  // padding:0 1rem;
-   padding:0;
+  padding:0;
+  padding:0 1rem;
   padding-top:250px;
   @media (max-width: ${breakpoints.l}px) {
   // padding: 250px  1rem 0 1rem;

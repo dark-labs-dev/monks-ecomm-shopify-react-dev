@@ -10,7 +10,7 @@ export const Container = styled.div`
   margin: 0 auto;
   max-width: 1010px;
   overflow-x:hidden;
-  padding:0 1rem 0 1rem;
+  padding:1rem 1rem 0 1rem;
   `
 
 export const MenuLink = styled(Link)`
