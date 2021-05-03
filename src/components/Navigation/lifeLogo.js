@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import styled from '@emotion/styled'
 import { DefaultGrid } from './defaultGrid'
 import useTimer from "./useTimer";
+import { breakpoints, colors } from '../../utils/styles'
 
 export default function LifeLogo() {
     const [count, setCount] = useState(0)
@@ -10,8 +11,11 @@ export default function LifeLogo() {
     width:100%;
     height:auto;
     padding-top:1rem;
-    max-width:250px;
-    `
+    max-width:200px;
+    @media (max-width: ${breakpoints.s}px) {
+        max-width:150px;
+    } 
+`
 
     // useEffect(() => {
     //     const interval = setInterval(() => {

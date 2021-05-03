@@ -46,8 +46,12 @@ export const NavList = styled.ul`
 `
 
 export const NavListItem = styled.li`
-  line-height:1.8rem;
+  line-height:1.5rem;
+  @media (max-width: ${breakpoints.s}px) {
+    line-height:1rem;
+  } 
 `
+
 
 export const ThreeDotButton = styled.div`
   cursor:pointer;

@@ -42,7 +42,7 @@ export const GlobalStyle = props => (
         color:${colors.color1};
         }
         @media (max-width: ${breakpoints.s}px) {
-          font-size: .8rem;
+          font-size: .6rem;
         }
       }
       
