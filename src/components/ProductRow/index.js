@@ -12,6 +12,7 @@ const ProductRow = () => {
     const {
         store: { checkout },
     } = useContext(StoreContext)
+
     const { allShopifyProduct } = useStaticQuery(
         graphql`
       query {
@@ -57,7 +58,7 @@ const ProductRow = () => {
                 originalSrc
                 localFile {
                   childImageSharp {
-                    fluid(maxWidth: 910) {
+                    fluid(maxWidth: 3000) {
                       ...GatsbyImageSharpFluid_withWebp_tracedSVG
                     }
                   }
@@ -75,12 +76,47 @@ const ProductRow = () => {
 
     const getPrice = price =>
         Intl.NumberFormat(undefined, {
-            currency: checkout.currencyCode ? checkout.currencyCode : 'EUR',
+            currency: checkout.currencyCode ? checkout.currencyCode : 'USD',
             minimumFractionDigits: 2,
             style: 'currency',
         }).format(parseFloat(price ? price : 0))
 
     const productItm = allShopifyProduct.edges[1].node
+
+    const ImageCarousel = ({ images, handle }) => {
+        const [imageIndex, setImageIndex] = useState(0)
+        return (
+            <>
+                {images ?
+                    <>
+                        <Link to={`/product/${handle}/`}>
+                            <HomeImg
+                                fluid={images[imageIndex].localFile.childImageSharp.fluid}
+                                imgStyle={{
+                                    objectFit: "contain"
+                                }}
+                                alt={[imageIndex].handle}
+                            />
+                        </Link>
+
+                        <HomeImageUi>
+                            <svg
+                                aria-hidden="true"
+                                tabIndex="0"
+                                width="21"
+                                height="8"
+                                viewBox="0 0 21 8"
+                                fill="none"
+                                onClick={() => setImageIndex((imageIndex <= images.length - 2) ? imageIndex + 1 : 0)}
+                            >
+                                <path d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5H20V3.5H0V4.5Z" fill="black" />
+                            </svg>
+                        </HomeImageUi>
+                    </> : <>...Loading...</>
+                }
+            </>
+        )
+    }
 
     return (
 
@@ -96,7 +132,7 @@ const ProductRow = () => {
                             description,
                             descriptionHtml,
                             shopifyId,
-                            images: [firstImage],
+                            images,
                             variants: [firstVariant],
                             options: [firstOption],
                             priceRange,
@@ -105,27 +141,10 @@ const ProductRow = () => {
                         <Product key={id}>
                             <Title>{title}</Title>
                             <PriceTag aria-label={`${title} Price`}>{getPrice(firstVariant.price)}</PriceTag>
-                            <Link to={`/product/${handle}/`}>
-                                {firstImage && firstImage.localFile && (
-                                    <>
-                                        <HomeImg
-                                            fluid={firstImage.localFile.childImageSharp.fluid}
-                                            alt={handle}
-                                        />
-                                    </>
-                                )}
-                            </Link>
-                            <HomeImageUi>
-                                <svg
-                                    width="21"
-                                    height="8"
-                                    viewBox="0 0 21 8"
-                                    fill="none"
-                                // onClick={ }
-                                >
-                                    <path d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5H20V3.5H0V4.5Z" fill="black" />
-                                </svg>
-                            </HomeImageUi>
+                            <ImageCarousel
+                                images={images}
+                                handle={handle}
+                            />
                             <InfoUi
                                 title={'Info'}
                                 description={JSON.parse(description)["home"].description}
@@ -137,25 +156,6 @@ const ProductRow = () => {
                                 type='list'
                             />
 
-                            {/* <DescriptionTextContainer>
-                                <TextToggle
-                                    aria-label="More Information"
-                                    onClick={() => setDescriptionToggle(!descriptionToggle)}>Info</TextToggle>
-                                {descriptionToggle && <DescriptionText>
-                                    {JSON.parse(description)["home"].description}
-                                </DescriptionText>
-                                }
-                            </DescriptionTextContainer>
-
-                            <DescriptionTextContainer>
-                                <TextToggle
-                                    aria-label="Ingredients"
-                                    onClick={() => setIngredientToggle(!ingredientToggle)}>From</TextToggle>
-                                {ingredientToggle && <IngredientList
-                                    list={(JSON.parse(description)["home"].ingredients)}
-                                />
-                                }
-                            </DescriptionTextContainer> */}
 
                             <ProductHomeForm
                                 productTest={productItm}
@@ -178,7 +178,7 @@ const ProductRow = () => {
             ) : (
                 <p>More Monks Essentially From Coming Soon</p>
             )}
-        </GridRow>
+        </GridRow >
     )
 }
 

@@ -26,14 +26,13 @@ export const GlobalStyle = props => (
       max-width:100%;
       min-height:100vh; 
      }
-
+    
     body {
         margin: 0;
         width:100%;
         height:100%;    
       }
 
-      
       a {
         font-family: MonumentGrotesk-Regular;
         color:#fff;
@@ -76,46 +75,48 @@ export const GlobalStyle = props => (
       input{
         cursor:pointer;   
       }
-
       button{
         cursor:pointer;   
         font-size:1rem;
         border:none;
         background:transparent;
         text-decoration:underline;  
-         &:hover {
-            color: ${colors.color1};
-          }
-    
+        &:hover {
+          color: ${colors.color1};
+        }
       }
+
     `}
   />
 )
 
 export const HomeImg = styled(Image)`
   max-width: 100%;
-  max-height: 600px;
-  // margin:0 6rem;
-  margin-bottom: 1.45rem;
-`
+   max-height: 600px;
+   // margin:0 6rem;
+   margin-bottom: 1.45rem;
+   object-fit: contain;
+
+   `
 
 export const HomeImageUi = styled.div`
-  height:100%;
-  display:flex;
-  justify-content: flex-end;
-`
+   height:100%;
+   display:flex;
+   justify-content: flex-end;
+   `
 
 export const Img = styled(Image)`
-  max-width: 100 %;
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-`
+   max-width: 100 %;
+   margin-left: 0;
+   margin-right: 0;
+   margin-top: 0;
+   padding-bottom: 0;
+   padding-left: 0;
+   padding-right: 0;
+   padding-top: 0;
+   margin-bottom: 1.45rem;
+   object-fit: contain;
+   `
 
 export const Container = styled.div`
   // max-width: 960px;
@@ -127,6 +128,13 @@ export const Container = styled.div`
   flex-direction: column;
   @media (max-width: ${breakpoints.l}px) {
     padding:0 1rem;
+    margin-top: 60vh;
+  }
+  @media (max-width: ${breakpoints.s}px) {
+  margin-top: 200px;
+}
+@media (max-height: 400px) {
+  margin-top: 300px;
 }
 `
 

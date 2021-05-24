@@ -10,7 +10,7 @@ export const Container = styled.div`
   margin: 0 auto;
   max-width: 1010px;
   overflow-x:hidden;
-  padding:1rem 1rem 0 1rem;
+  padding:1rem;
   `
 
 export const MenuLink = styled(Link)`
@@ -29,7 +29,7 @@ export const MenuLinkTitle = styled(Link)`
   text-decoration: none;
     font-family:MonumentGrotesk-Medium;
   @media (max-width: ${breakpoints.s}px) {
-    font-size:.75rem;
+    font-size:.6rem;
   }
   &:hover {
     color:black;
@@ -72,4 +72,8 @@ export const EndContainer = styled.div`
   justify-content:flex-end;
   width:10%;
   text-align:right;
+`
+
+export const LottieContainer = styled.div`
+  width:60%;
 `

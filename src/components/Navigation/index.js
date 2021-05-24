@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState, useRef } from 'react'
 import reduce from 'lodash/reduce'
 import PropTypes from 'prop-types'
 
@@ -6,8 +6,9 @@ import StoreContext from '~/context/StoreContext'
 import { UsePageState } from '~/context/pageContext'
 import styled from '@emotion/styled'
 import { breakpoints, colors } from '../../utils/styles'
-import { CartCounter, Container, StartContainer, MidContainer, EndContainer, MenuLinkTitle, MenuLink, NavList, NavListItem, ThreeDotButton } from './styles'
+import { CartCounter, Container, StartContainer, MidContainer, EndContainer, MenuLinkTitle, MenuLink, NavList, NavListItem, ThreeDotButton, LottieContainer } from './styles'
 import LifeLogo from './lifeLogo'
+import ControlledLottie from './controlledLottie'
 
 const useQuantity = () => {
   const {
@@ -18,12 +19,13 @@ const useQuantity = () => {
   return [total !== 0, total]
 }
 
+
 const Navigation = ({ siteTitle }) => {
   const { Page } = UsePageState()
   const [hasItems, quantity] = useQuantity()
 
   const [navActive, setNavActive] = useState(false);
-
+  const [logoActive, setLogoActive] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -59,14 +61,16 @@ const Navigation = ({ siteTitle }) => {
       <Container>
         <StartContainer>
           < MenuLinkTitle to="/">INNOVATION INSPIRED BY NATURE</MenuLinkTitle>
-          <LifeLogo />
+          <ControlledLottie
+            navActive={navActive}
+          />
         </StartContainer>
 
         <MidContainer>
           < MenuLinkTitle to="/about">
             About
         </MenuLinkTitle>
-          {navActive ?
+          {navActive &&
             <>
               <NavList>
                 <NavListItem>Los Angeles, California</NavListItem>
@@ -77,9 +81,9 @@ const Navigation = ({ siteTitle }) => {
               <ThreeDotButton onClick={() => setNavActive(navActive => !navActive)}>...
           </ThreeDotButton>
             </>
-            :
-            <ThreeDotButton onClick={() => setNavActive(navActive => !navActive)}>...
-          </ThreeDotButton>
+            // :
+            //   <ThreeDotButton onClick={() => setNavActive(navActive => !navActive)}>...
+            // </ThreeDotButton>
           }
         </MidContainer>
 

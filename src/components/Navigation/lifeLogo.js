@@ -9,10 +9,7 @@ export default function LifeLogo() {
     const TitleImage = styled.svg`
     width:100%;
     height:auto;
-    padding:0.8rem 0;
-    max-width:260px;
     @media (max-width: ${breakpoints.s}px) {
-        max-width:150px;
     } 
 `
 

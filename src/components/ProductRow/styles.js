@@ -6,12 +6,12 @@ export const GridRow = styled.div`
   grid-template-column: repeat(1, 1fr);
   gap: 5rem;
   margin-bottom: 5rem;
-  padding: 175px  0 0 0;
+  padding: 200px  1rem 0 1rem;
   @media (max-width: ${breakpoints.l}px) {
-  padding: 175px  1rem 0 1rem;
+    padding: 200px  1rem 0 1rem;
   }
   @media (max-width: ${breakpoints.s}px) {
-    padding: 200px  1rem 0 1rem;
+    padding: 250px  1rem 0 1rem;
   }
 `
 
