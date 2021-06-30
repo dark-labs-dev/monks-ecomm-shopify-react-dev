@@ -133,7 +133,7 @@ const ProductHomeForm = ({ product, productTest }) => {
                 Purchase
             </PurchaseButton>
 
-            <label hidden="true" htmlFor="quantity">Qty</label>
+            <label hidden={true}  htmlFor="quantity">Qty</label>
             <Input
                 aria-label="Product quantity input"
                 type="number"

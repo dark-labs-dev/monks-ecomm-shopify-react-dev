@@ -101,7 +101,7 @@ const ProductRow = () => {
 
                         <HomeImageUi>
                             <svg
-                                aria-hidden="true"
+                                aria-hidden={true}
                                 tabIndex="0"
                                 width="21"
                                 height="8"

@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from 'react'
 import { graphql } from 'gatsby'
 
 import SEO from '~/components/seo'
-import ProductHomeForm from '~/components/productHomeForm'
+import ProductForm from '~/components/productForm'
 
 import {
   Img,
@@ -50,7 +50,7 @@ const ProductPage = ({ data }) => {
           <GridLeft>
             <ProductTitle>{product.title}</ProductTitle>
             <ProductTitle aria-label={`${product.title} Price`}>{getPrice(product.variants[0].price)}</ProductTitle>
-            <ProductHomeForm product={product} />
+            <ProductForm product={product} />
           </GridLeft>
 
           <GridCenter>
