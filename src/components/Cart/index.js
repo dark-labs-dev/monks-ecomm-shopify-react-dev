@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 
 import StoreContext from '~/context/StoreContext'
 import LineItem from './LineItem'
-
+import {CheckoutButton} from './LineItem/styles'
 const Cart = () => {
   const {
     store: { checkout },
@@ -28,12 +28,12 @@ const Cart = () => {
       <h2>Total</h2>
       <p>$ {checkout.totalPrice}</p> */}
       <br />
-      <button
+      <CheckoutButton
         onClick={handleCheckout}
         disabled={checkout.lineItems.length === 0}
       >
         Check out
-      </button>
+      </CheckoutButton>
     </div>
   )
 }

@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { TextToggle, DescriptionText, DescriptionTextContainer, IngredientList, IngredientText } from '../ProductRow/styles'
 import DescriptionInfoUi from './descriptionInfoUi';
-export default function InfoUi({ title, description, type }) {
-    const [descriptionToggle, setDescriptionToggle] = useState(false)
-    const [ingredientToggle, setIngredientToggle] = useState(false)
-    const [applicationToggle, setApplicationToggle] = useState(false)
+export default function ProductInfoUi({ title, description, type }) {
+    const [descriptionToggle, setDescriptionToggle] = useState(true)
+    const [ingredientToggle, setIngredientToggle] = useState(true)
+    const [applicationToggle, setApplicationToggle] = useState(true)
 
     function IngredientListItems({ list }) {
         const ingredients = list;

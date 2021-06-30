@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect, useCallback } from 'react'
 import find from 'lodash/find'
 import isEqual from 'lodash/isEqual'
 import PropTypes from 'prop-types'
-import { PurchaseUi, Button, Input } from './styles'
+import { PurchaseUi, Button,PurchaseButton, Input } from './styles'
 
 import StoreContext from '~/context/StoreContext'
 
@@ -121,8 +121,19 @@ const ProductForm = ({ product, productTest }) => {
                 </React.Fragment>
             ))} 
             */}
-            <label htmlFor="quantity">Qty</label>
             <br />
+            {!available && <p>This Product is out of Stock!</p>}
+            {/* <p>— {price} —</p> */}
+            <PurchaseButton
+                aria-label="Add To Cart"
+                type="submit"
+                disabled={!available || adding}
+                onClick={handleAddToCart}
+                >
+                Purchase
+            </PurchaseButton>
+
+            <label hidden="true" htmlFor="quantity">Qty</label>
             <Input
                 aria-label="Product quantity input"
                 type="number"
@@ -133,17 +144,6 @@ const ProductForm = ({ product, productTest }) => {
                 onChange={handleQuantityChange}
                 value={quantity}
             />
-            {!available && <p>This Product is out of Stock!</p>}
-            {/* <p>— {price} —</p> */}
-            —
-            <Button
-                aria-label="Add To Cart"
-                type="submit"
-                disabled={!available || adding}
-                onClick={handleAddToCart}
-            >
-                Purchase
-            </Button>
         </PurchaseUi>
     )
 }

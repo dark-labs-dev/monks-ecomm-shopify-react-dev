@@ -13,11 +13,9 @@ import Navigation from '~/components/Navigation'
 
 const Wrapper = styled.div`
   margin: 0 auto;
-  max-width: 990px;
-  padding: 0 auto;
   position: relative;
-  padding: 0;
-  width: 100%;
+  width: calc(100% - 2rem);
+  padding: 0 1rem;
 `
 
 const Footer = styled.div`

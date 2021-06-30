@@ -11,7 +11,9 @@ export const Product = styled.div`
   display: flex;
   flex-direction: column;
   border-bottom:solid 1px #fff;
-`
+  max-width:1500px;
+  margin:auto;
+  `
 
 export const Title = styled.h2`
   font-size: 1rem;
@@ -46,8 +48,8 @@ export const TextToggle = styled.button`
   display:flex;
   justify-content:center;
   cursor:pointer;
-  font-size:1rem;
-  text-decoration:NONE;  
+  font-size:.5rem;
+  text-decoration:none;  
   align-items: center;   
   width: max-content;
   margin:.5rem 0;
@@ -57,12 +59,16 @@ export const TextToggle = styled.button`
   }`
 
 export const DotToggle = styled.span`
-}`
+`
 
-export const IngredientText = styled.p`
 
-}`
+export const IngredientList = styled.ul`
 
+`
+
+export const IngredientText = styled.li`
+
+`
 // export const QuantityNum = styled.p`
 
 // }`

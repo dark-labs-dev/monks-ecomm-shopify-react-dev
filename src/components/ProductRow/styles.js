@@ -3,15 +3,16 @@ import { breakpoints, colors } from '../../utils/styles'
 
 export const GridRow = styled.div`
   display: grid;
-  grid-template-column: repeat(1, 1fr);
   gap: 5rem;
+  margin:auto;
   margin-bottom: 5rem;
-  padding: 200px  1rem 0 1rem;
+  padding: 1rem  1rem 0 1rem;
+  max-width:910px;
   @media (max-width: ${breakpoints.l}px) {
-    padding: 200px  1rem 0 1rem;
+    padding: 1rem  1rem 0 1rem;
   }
   @media (max-width: ${breakpoints.s}px) {
-    padding: 250px  1rem 0 1rem;
+    padding: 1rem  1rem 0 1rem;
   }
 `
 
@@ -19,6 +20,7 @@ export const Product = styled.div`
   display: flex;
   flex-direction: column;
   border-bottom:solid 1px #fff;
+  
 `
 
 export const Title = styled.h2`
@@ -47,7 +49,6 @@ export const DescriptionTextContainer = styled.div`
 }`
 
 export const DescriptionText = styled.div`
-font-size:.7em;
 
 }`
 
@@ -55,7 +56,7 @@ export const TextToggle = styled.button`
   display:flex;
   justify-content:center;
   cursor:pointer;
-  font-size:1rem;
+  font-size:.8rem;
   text-decoration:NONE;  
   align-items: center;   
   width: max-content;
@@ -66,11 +67,17 @@ export const TextToggle = styled.button`
   }`
 
 export const DotToggle = styled.span`
-}`
+`
 
-export const IngredientText = styled.p`
+export const IngredientList = styled.ul`
+  display:flex;
+`
 
-}`
+export const IngredientText = styled.li`
+display:contents;
+width:min-content;
+font-size:1rem;
+`
 
 // export const QuantityNum = styled.p`
 

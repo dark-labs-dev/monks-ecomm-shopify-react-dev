@@ -2,17 +2,18 @@ import React, { useContext, useEffect } from 'react'
 import { graphql } from 'gatsby'
 
 import SEO from '~/components/seo'
-import ProductForm from '~/components/ProductHomeForm'
+import ProductForm from '~/components/productHomeForm'
 import {
   Img,
   Container,
   TwoColumnGrid,
   GridLeft,
+  GridCenter,
   GridRight,
 } from '~/utils/styles'
 import StoreContext from '~/context/StoreContext'
 import { ProductTitle, ProductDescription } from './styles'
-import InfoUi from '~/components/infoUi'
+import InfoUi from '~/components/infoUi/productInfoUi'
 import { UsePageDispatch } from '~/context/pageContext'
 
 function PageCheck() {
@@ -40,13 +41,18 @@ const ProductPage = ({ data }) => {
 
 
   return (
-    <>
+      <Container>
       <SEO title={product.title} description={product.description} />
       <PageCheck pagePay="product" />
-      <Container>
         <TwoColumnGrid>
 
           <GridLeft>
+            <ProductTitle>{product.title}</ProductTitle>
+            <ProductTitle aria-label={`${product.title} Price`}>{getPrice(product.variants[0].price)}</ProductTitle>
+            <ProductForm product={product} />
+          </GridLeft>
+
+          <GridCenter>
             {product.images.map(image => (
               <Img
                 fluid={image.localFile.childImageSharp.fluid}
@@ -54,30 +60,31 @@ const ProductPage = ({ data }) => {
                 alt={product.title}
               />
             ))}
-          </GridLeft>
+          </GridCenter>
+
           <GridRight>
-            <ProductTitle>{product.title}</ProductTitle>
-
-            <ProductTitle aria-label={`${product.title} Price`}>{getPrice(product.variants[0].price)}</ProductTitle>
-
             <InfoUi
               title={'Info'}
-              description={JSON.parse(product.description)["product"].description}
+              description={JSON.parse(product.description)["home"]}
               type='description'
             />
+
             <InfoUi
-              title={'From'}
+              title={'Ingredients'}
               description={(JSON.parse(product.description)["home"].ingredients)}
               type='list'
             />
-            <ProductForm product={product} />
+
+            <InfoUi
+              title={'Application'}
+              description={(JSON.parse(product.description)["home"].application)}
+              type='application'
+            />
           </GridRight>
         </TwoColumnGrid>
       </Container>
-    </>
   )
 }
-
 export const query = graphql`
   query($handle: String!) {
     shopifyProduct(handle: { eq: $handle }) {

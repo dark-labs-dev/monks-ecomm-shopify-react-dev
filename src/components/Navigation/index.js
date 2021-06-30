@@ -6,9 +6,11 @@ import StoreContext from '~/context/StoreContext'
 import { UsePageState } from '~/context/pageContext'
 import styled from '@emotion/styled'
 import { breakpoints, colors } from '../../utils/styles'
-import { CartCounter, Container, StartContainer, MidContainer, EndContainer, MenuLinkTitle, MenuLink, NavList, NavListItem, ThreeDotButton, LottieContainer } from './styles'
+import { CartCounter, Container, StartContainer, MidContainer, EndContainer, LogoImage, MenuLinkTitle, MenuLink, NavListSmall,NavListLarge,NavList, NavListItem, ThreeDotButton,MenuLinkBag } from './styles'
 import LifeLogo from './lifeLogo'
 import ControlledLottie from './controlledLottie'
+import GridTextured from './gridTexture.svg'
+import BlackLogo from './monksLogoBlack.svg';
 
 const useQuantity = () => {
   const {
@@ -46,7 +48,8 @@ const Navigation = ({ siteTitle }) => {
   }, [Page]);
 
   const Wrapper = styled.div`
-    background: ${colors.background};
+    background: #fff;
+    margin:0 1rem;
     margin-bottom: 1.45rem;
     position:fixed;
     z-index:2;
@@ -57,45 +60,61 @@ const Navigation = ({ siteTitle }) => {
   `
 
   return (
-    <Wrapper >
+    <>
       <Container>
         <StartContainer>
-          < MenuLinkTitle to="/">INNOVATION INSPIRED BY NATURE</MenuLinkTitle>
-          <ControlledLottie
-            navActive={navActive}
-          />
+          < MenuLinkTitle to="/">
+            <LogoImage alt="monks logo" src={BlackLogo} />
+          INNOVATION INSPIRED BY NATURE</MenuLinkTitle>
         </StartContainer>
+      </Container>
+
+      <Wrapper >
 
         <MidContainer>
-          < MenuLinkTitle to="/about">
-            About
-        </MenuLinkTitle>
-          {navActive &&
-            <>
-              <NavList>
-                <NavListItem>Los Angeles, California</NavListItem>
-                <NavListItem>@monks</NavListItem>
-                <NavListItem>Subscribe to newsletter</NavListItem>
-                <NavListItem>Terms & Shipping </NavListItem>
-              </NavList>
-              <ThreeDotButton onClick={() => setNavActive(navActive => !navActive)}>...
-          </ThreeDotButton>
-            </>
-            // :
-            //   <ThreeDotButton onClick={() => setNavActive(navActive => !navActive)}>...
-            // </ThreeDotButton>
-          }
-        </MidContainer>
+          {/* < MenuLinkTitle to="/about">About</MenuLinkTitle>
+          {navActive && */}
+          <NavListLarge>
+              <NavListItem>< MenuLinkTitle to="/about">About</MenuLinkTitle></NavListItem>
+              <NavListItem>< MenuLinkTitle to="/about">Los Angeles, California</MenuLinkTitle></NavListItem>
+              <NavListItem>< MenuLinkTitle to="https://www.instagram.com/monks/">@monks</MenuLinkTitle></NavListItem>
+              <NavListItem>< MenuLinkTitle to="/about">Subscribe to newsletter</MenuLinkTitle></NavListItem>
+              <NavListItem>< MenuLinkTitle to="/about">Terms & Shipping </MenuLinkTitle></NavListItem>
+              <NavListItem>{hasItems && <MenuLinkBag to="/cart"><>{`${quantity} — `}</>
+                  Bag
+            </MenuLinkBag>}
+              </NavListItem>
+          </NavListLarge>
 
-        <EndContainer>
-          <MenuLink to="/cart">
+          <NavListSmall>
+              <NavListItem> < MenuLinkTitle to="/about">About</MenuLinkTitle></NavListItem>
+              <NavListItem>LA, Ca</NavListItem>
+              <NavListItem>@monks</NavListItem>
+              <NavListItem>Newsletter</NavListItem>
+              <NavListItem>T & S </NavListItem>
+              <NavListItem>{hasItems && <MenuLinkBag to="/cart"><>{`${quantity} — `}</>
+                  Bag
+            </MenuLinkBag>}
+              </NavListItem>
+          </NavListSmall>
+          {/*  <ThreeDotButton onClick={() => setNavActive(navActive => !navActive)}>...
+           </ThreeDotButton>
+            </>
+             :
+               <ThreeDotButton onClick={() => setNavActive(navActive => !navActive)}>...
+             </ThreeDotButton>
+          } */}
+          {/* <MenuLink to="/cart">
             {hasItems && <>{`${quantity} — `}</>}
           Bag
-        </MenuLink>
-        </EndContainer>
+        </MenuLink> */}
+        </MidContainer>
 
-      </Container>
-    </Wrapper >
+        {/* <EndContainer>
+        </EndContainer> */}
+
+      </Wrapper >
+    </>
   )
 }
 

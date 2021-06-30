@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
-import { TextToggle, DescriptionText, DescriptionTextContainer, IngredientList, IngredientText } from '../ProductRow/styles'
-import DescriptionInfoUi from './descriptionInfoUi';
-export default function InfoUi({ title, description, type }) {
+import { TextToggle, DescriptionText, DescriptionTextContainer, IngredientList, IngredientText } from '../infoUi/styles'
+export default function ProductInfo({ title, description, type }) {
     const [descriptionToggle, setDescriptionToggle] = useState(false)
     const [ingredientToggle, setIngredientToggle] = useState(false)
     const [applicationToggle, setApplicationToggle] = useState(false)
@@ -17,19 +16,9 @@ export default function InfoUi({ title, description, type }) {
             <IngredientList >{listItems}</IngredientList>
         );
     }
-
     return (<>
-        {type === 'description' && <DescriptionTextContainer>
-            <TextToggle
-                style={{ 'color': descriptionToggle && '#8A1B61' }}
-                aria-label="More Information"
-                onClick={() => setDescriptionToggle(!descriptionToggle)}>{title}</TextToggle>
-            {descriptionToggle && <DescriptionInfoUi description={description} />}
-        </DescriptionTextContainer>
-        }
-
         {type === 'application' && <DescriptionTextContainer>
-            <TextToggle
+           test <TextToggle
                 style={{ 'color': applicationToggle && '#8A1B61' }}
                 aria-label="More Information"
                 onClick={() => setApplicationToggle(!applicationToggle)}>{title}</TextToggle>

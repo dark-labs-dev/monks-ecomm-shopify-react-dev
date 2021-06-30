@@ -11,9 +11,10 @@ export const breakpoints = {
   xl: 1200,
 }
 export const colors = {
-  background: "#CAB64B",
-  color0: "#CAB64B",
-  color1: "#CAB64B"
+  background: "#8A1B61",
+  color0: "#8A1B61",
+  color1: "#8A1B61",
+  colorMagenta:'#8A1B61'
 }
 export const GlobalStyle = props => (
   <Global
@@ -65,7 +66,7 @@ export const GlobalStyle = props => (
       }
 
       li {
-        font-size: .71rem;
+        font-size: .8rem;
         list-style-type: none;
         margin: 0;
         margin-bottom: .25rem;
@@ -119,22 +120,20 @@ export const Img = styled(Image)`
    `
 
 export const Container = styled.div`
-  // max-width: 960px;
-  margin-top: 150px;
-  height: calc(100vh - 150px);
   display: flex;
+  margin-top:2rem;
   justify-content: center;
   align-content: center;
   flex-direction: column;
   @media (max-width: ${breakpoints.l}px) {
     padding:0 1rem;
-    margin-top: 60vh;
+    // margin-top: 60vh;
   }
   @media (max-width: ${breakpoints.s}px) {
-  margin-top: 200px;
+  // margin-top: 200px;
 }
 @media (max-height: 400px) {
-  margin-top: 300px;
+  // margin-top: 300px;
 }
 `
 
@@ -148,11 +147,12 @@ export const CartContainer = styled.div`
 
 export const TwoColumnGrid = styled.div`
   display: grid;
-  grid-template-columns: 1fr 2rem 1fr;
-  grid-template-rows: 1auto;
-  grid-template-areas: 'left . right';
+  grid-template-columns: 1fr 2rem 2fr 2rem 3fr;
+  grid-template-rows: auto;
+  grid-template-areas: 'left . center . right';
   width: 100%;
-
+  max-width:1500px;
+  margin:auto;
   @media (max-width: ${breakpoints.l}px) {
     display: block;
   }
@@ -160,6 +160,15 @@ export const TwoColumnGrid = styled.div`
 
 export const GridLeft = styled.div`
   grid-area: left;
+`
+
+export const GridCenter = styled.div`
+  grid-area: center;
+  @media (max-width: ${breakpoints.l}px) {
+    max-height: 70vh;
+    overflow-y: scroll;
+    display: block;
+  }
 `
 
 export const GridRight = styled.div`
