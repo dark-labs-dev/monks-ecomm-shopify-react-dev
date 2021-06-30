@@ -6,7 +6,7 @@ import { PurchaseUi, Button,PurchaseButton, Input } from './styles'
 
 import StoreContext from '~/context/StoreContext'
 
-const ProductForm = ({ product, productTest }) => {
+const ProductHomeForm = ({ product, productTest }) => {
     const {
         options,
         variants,
@@ -148,7 +148,7 @@ const ProductForm = ({ product, productTest }) => {
     )
 }
 
-ProductForm.propTypes = {
+ProductHomeForm.propTypes = {
     product: PropTypes.shape({
         descriptionHtml: PropTypes.string,
         handle: PropTypes.string,
@@ -188,4 +188,4 @@ ProductForm.propTypes = {
     addVariantToCart: PropTypes.func,
 }
 
-export default ProductForm
+export default ProductHomeForm
