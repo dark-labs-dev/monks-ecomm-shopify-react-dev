@@ -5,11 +5,7 @@ import PropTypes from 'prop-types'
 import StoreContext from '~/context/StoreContext'
 import { UsePageState } from '~/context/pageContext'
 import styled from '@emotion/styled'
-import { breakpoints, colors } from '../../utils/styles'
-import { CartCounter, Container, StartContainer, MidContainer, EndContainer, LogoImage, MenuLinkTitle, MenuLink, NavListSmall,NavListLarge,NavList, NavListItem, ThreeDotButton,MenuLinkBag } from './styles'
-import LifeLogo from './lifeLogo'
-import ControlledLottie from './controlledLottie'
-import GridTextured from './gridTexture.svg'
+import {  Container, StartContainer, MidContainer, EndContainer, LogoImage, MenuLinkTitle, MenuLink, NavListSmall,NavListLarge,NavList, NavListItem, ThreeDotButton,MenuLinkBag } from './styles'
 import BlackLogo from './monksLogoBlack.svg';
 
 const useQuantity = () => {
