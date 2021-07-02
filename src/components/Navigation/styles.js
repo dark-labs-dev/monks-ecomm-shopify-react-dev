@@ -109,5 +109,5 @@ export const NavList = styled.ul`
   display:flex;
   width:100%;
   display:flex;
-  justify-content:space-evenly;
+  justify-content:space-between;
 `

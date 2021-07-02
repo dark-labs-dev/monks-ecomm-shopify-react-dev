@@ -43,15 +43,16 @@ const Navigation = ({ siteTitle }) => {
   }, [Page]);
 
   const Wrapper = styled.div`
-    background: #fff;
-    margin:0 1rem;
-    margin-bottom: 1.45rem;
-    position:fixed;
-    z-index:2;
-    top: 0;
-    max-height:250px;
-    // width:calc(100% - 1rem);
-    width:100%;
+  position:fixed;
+  top: 0;
+  z-index:2;
+  background: #fff;
+  margin:0 auto;
+  margin-bottom: 1.45rem;
+  max-height:250px;
+  width:100%;
+  max-width:910px;
+  width: calc(100% - 2rem);
   `
 
   return (
@@ -62,7 +63,6 @@ const Navigation = ({ siteTitle }) => {
             <LogoImage alt="monks logo" src={BlackLogo} />
           </MenuLinkTitle>
         </StartContainer>
-      </Container>
 
       <Wrapper >
         <MidContainer>
@@ -82,6 +82,7 @@ const Navigation = ({ siteTitle }) => {
           </NavList>
         </MidContainer>
       </Wrapper >
+      </Container>
     </>
   )
 }
