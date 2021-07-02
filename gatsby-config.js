@@ -25,11 +25,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Monks Essentially From`,
-        short_name: `starter`,
+        name: `Monks`,
+        short_name: `Innovation Inspired by Nature`,
         start_url: `/`,
-        background_color: `#d6cf8c`,
-        theme_color: `#d6cf8c`,
+        background_color: `#8a1b61`,
+        theme_color: `#8a1b61`,
         display: `minimal-ui`,
         icon: `src/images/monks-m.png`, // This path is relative to the root of the site.
       },
