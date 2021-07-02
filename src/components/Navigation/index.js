@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import StoreContext from '~/context/StoreContext'
 import { UsePageState } from '~/context/pageContext'
 import styled from '@emotion/styled'
-import { Container, StartContainer, MidContainer, EndContainer, LogoImage, MenuLinkTitle, MenuLink, NavListSmall, NavListLarge, NavListItem, MenuLinkBag } from './styles'
+import { Container, StartContainer, MidContainer, EndContainer, LogoImage, MenuLinkTitle, NavList, NavListItem, MenuLinkBag } from './styles'
 import BlackLogo from './monksLogoBlack.svg';
 
 const useQuantity = () => {
@@ -65,52 +65,22 @@ const Navigation = ({ siteTitle }) => {
       </Container>
 
       <Wrapper >
-
         <MidContainer>
-          {/* < MenuLinkTitle to="/about">About</MenuLinkTitle>
-          {navActive && */}
-          <NavListLarge>
+          <NavList>
             <NavListItem>
               < MenuLinkTitle to="/about">About</MenuLinkTitle>
             </NavListItem>
             <NavListItem>
               < MenuLinkTitle to="https://www.instagram.com/monks/">@monks</MenuLinkTitle></NavListItem>
             <NavListItem>
-              < MenuLinkTitle to="/about">Ingredients Glossary</MenuLinkTitle></NavListItem>
-            <NavListItem>{hasItems && <MenuLinkBag to="/cart"><>{`${quantity} — `}</>
+              < MenuLinkTitle to="/about#ingredients">Ingredients Glossary</MenuLinkTitle></NavListItem>
+            <NavListItem>
+              {hasItems ? <MenuLinkBag to="/cart"><>{`${quantity} — `}</>
                   Bag
-            </MenuLinkBag>}
+            </MenuLinkBag> : <MenuLinkTitle to="/cart">Bag</MenuLinkTitle>}
             </NavListItem>
-          </NavListLarge>
-
-          <NavListSmall>
-            <NavListItem>
-              < MenuLinkTitle to="/about">About</MenuLinkTitle>
-            </NavListItem>
-            <NavListItem>
-              < a href="https://www.instagram.com/monks/">@monks</a></NavListItem>
-            <NavListItem>
-              < MenuLinkTitle to="/about">Ingredients Glossary</MenuLinkTitle></NavListItem>
-            <NavListItem>{hasItems && <MenuLinkBag to="/cart"><>{`${quantity} — `}</>
-                  Bag
-            </MenuLinkBag>}
-            </NavListItem>
-          </NavListSmall>          {/*  <ThreeDotButton onClick={() => setNavActive(navActive => !navActive)}>...
-           </ThreeDotButton>
-            </>
-             :
-               <ThreeDotButton onClick={() => setNavActive(navActive => !navActive)}>...
-             </ThreeDotButton>
-          } */}
-          {/* <MenuLink to="/cart">
-            {hasItems && <>{`${quantity} — `}</>}
-          Bag
-        </MenuLink> */}
+          </NavList>
         </MidContainer>
-
-        {/* <EndContainer>
-        </EndContainer> */}
-
       </Wrapper >
     </>
   )

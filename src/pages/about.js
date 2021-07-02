@@ -37,8 +37,8 @@ const About = () => (
     <p>Monks was born from a desire for quality, essential, non-toxic body products that simply work. With a genderless approach to quality and innovation inspired by nature, we develop effective formulas with as few ingredients as possible in order to respect your body and the planet. From our all-natural fragrance blends to our application mechanisms, every aspect of our collection and its design has been meticulously conceived to enhance your personal care ritual. With Monks, you can take more intentional care of yourself and experience the peace of mind that comes with knowing you can trust what is inside the things you put on your body.</p>
 
     <br />
-
-    <h2>Ingredients</h2>
+      <h2 id="ingredients">Ingredients Glossary</h2>
+      <p>Coming soon.</p>
   </AboutPage>
 )
 

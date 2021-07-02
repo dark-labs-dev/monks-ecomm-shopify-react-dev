@@ -51,16 +51,19 @@ export const MenuLinkBag = styled(Link)`
 `
 
 export const MenuLinkTitle = styled(Link)`
-display:flex;
-flex-direction:column;
+  display:flex;
+  flex-direction:column;
   text-decoration: none;
-    font-family:MonumentGrotesk-Medium;
-    color:black;
-    margin:auto;
+  font-family:MonumentGrotesk-Medium;
+  text-weight:normal;
+  color:black;
+  margin:auto;
+  font-size:1.15rem;
   @media (max-width: ${breakpoints.s}px) {
+    font-size:.85rem;
   }
   &:hover {
-    color:black;
+    color:${colors.colorMagenta};
   } `
 
 
@@ -70,14 +73,6 @@ export const NavListItem = styled.li`
   
   @media (max-width: ${breakpoints.s}px) {
   } 
-`
-
-
-export const ThreeDotButton = styled.div`
-  cursor:pointer;
-  display: flex;
-  align-items: left;
-  justify-content: start;
 `
 
 export const StartContainer = styled.div`
@@ -102,8 +97,8 @@ export const EndContainer = styled.div`
 `
 
 export const LogoImage = styled.img`
-  max-width:225px;
-  width:38vw;
+  max-width:255px;
+  width:45vw;
   margin:auto;
   padding:0 0 .5rem 0;
 `
@@ -116,28 +111,3 @@ export const NavList = styled.ul`
   display:flex;
   justify-content:space-evenly;
 `
-
-export const NavListLarge = styled.ul`
-  padding:0;
-  margin:0;
-  display:flex;
-  width:100%;
-  display:flex;
-  justify-content:space-evenly;
-  @media (max-width: ${breakpoints.s}px) {
-    display:none;
-    }  
-`
-
-export const NavListSmall = styled.ul`
-  padding:0;
-  margin:0;
-  display:flex;
-  width:100%;
-  justify-content:space-evenly;
-  display:none;
-  @media (max-width: ${breakpoints.s}px) {
-    display:flex;
-    }  
-`
-

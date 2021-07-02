@@ -1,3 +1,7 @@
+label{
+    font-size:.6rem;
+}
+
 .hero--wrapper{
     width: 100%;
     display: flex;
@@ -10,4 +14,8 @@
 .hero--image{
     width: 50%;
     margin:auto;
+}
+
+.footer--wrapper{
+    text-align: center;
 }

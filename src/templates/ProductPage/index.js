@@ -16,6 +16,7 @@ import StoreContext from '~/context/StoreContext'
 import { ProductTitle, ProductDescription } from './styles'
 import InfoUi from '~/components/infoUi/productInfoUi'
 import { UsePageDispatch } from '~/context/pageContext'
+import Footer from '../../components/footer'
 
 function PageCheck() {
   const PageDispatch = UsePageDispatch()
@@ -71,18 +72,19 @@ const ProductPage = ({ data }) => {
             />
 
             <InfoUi
-              title={'Notes'}
+              title={'Ingredients'}
               description={(JSON.parse(product.description)["home"].ingredients)}
               type='list'
             />
 
             <InfoUi
-              title={'Ingredients'}
+              title={'Notes'}
               description={(JSON.parse(product.description)["home"].application)}
               type='application'
             />
           </GridRight>
         </TwoColumnGrid>
+        <Footer/>
       </Container>
   )
 }
