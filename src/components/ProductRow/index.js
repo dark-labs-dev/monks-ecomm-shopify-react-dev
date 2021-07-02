@@ -147,7 +147,7 @@ const ProductRow = () => {
                                 handle={handle}
                             />
                             <InfoUi
-                                title={'Info'}
+                                title={'Description'}
                                 description={JSON.parse(description)["home"]}
                                 type='description'
                             />
@@ -159,7 +159,7 @@ const ProductRow = () => {
                             />
 
                             <InfoUi
-                                title={'Application'}
+                                title={'Notes'}
                                 description={(JSON.parse(description)["home"].application)}
                                 type='application'
                             />

@@ -12,14 +12,14 @@ export const PurchaseButton = styled.button`
     font-weight: bold;
     padding:0;
     margin;
-    background:#8A1B61;
+    background:#000;
     color:#fff;
     text-decoration: none;
     padding:.2rem 1rem;
-    border:solid .15rem #8A1B61;
+    border:solid .15rem #000;
     &:hover{
       background:#fff;
-      color:#8A1B61;
+      color:#000;
     }`
 
 export const Input = styled.input`

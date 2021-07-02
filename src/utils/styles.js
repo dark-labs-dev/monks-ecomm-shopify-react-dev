@@ -37,12 +37,12 @@ export const GlobalStyle = props => (
       a {
         font-family: MonumentGrotesk-Regular;
         color:#fff;
-        text-decoration: underline;
+        text-decoration: none;
+        font-weight:normal;
         &:hover {
         color:${colors.color1};
         }
         @media (max-width: ${breakpoints.s}px) {
-          font-size: .6rem;
         }
       }
       
@@ -139,7 +139,7 @@ export const Container = styled.div`
 
 export const CartContainer = styled.div`
   margin: 0 auto;
-  max-width: 1010px;
+  max-width: 910px;
   min-height:calc(100vh - 140px);
   margin-top:80px;
   padding: auto 1rem;

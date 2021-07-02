@@ -9,13 +9,13 @@ export const Wrapper = styled.div`
 `
 
 export const CheckoutButton = styled.button`
-  background:#8A1B61;
+  background:#000;
   color:#fff;
   text-decoration: none;
   padding:.2rem 1rem;
-  border:solid .15rem #8A1B61;
+  border:solid .15rem #000;
   &:hover{
     background:#fff;
-    color:#8A1B61;
+    color:#000;
   }
   `

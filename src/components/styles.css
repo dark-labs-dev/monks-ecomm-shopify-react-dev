@@ -1,0 +1,13 @@
+.hero--wrapper{
+    width: 100%;
+    display: flex;
+    max-width: 910px;
+    justify-content: center;
+    text-align: center;
+    margin:auto;
+}
+
+.hero--image{
+    width: 50%;
+    margin:auto;
+}

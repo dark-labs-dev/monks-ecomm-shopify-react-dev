@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import StoreContext from '~/context/StoreContext'
 import { UsePageState } from '~/context/pageContext'
 import styled from '@emotion/styled'
-import {  Container, StartContainer, MidContainer, EndContainer, LogoImage, MenuLinkTitle, MenuLink, NavListSmall,NavListLarge,NavList, NavListItem, ThreeDotButton,MenuLinkBag } from './styles'
+import { Container, StartContainer, MidContainer, EndContainer, LogoImage, MenuLinkTitle, MenuLink, NavListSmall, NavListLarge, NavListItem, MenuLinkBag } from './styles'
 import BlackLogo from './monksLogoBlack.svg';
 
 const useQuantity = () => {
@@ -23,7 +23,6 @@ const Navigation = ({ siteTitle }) => {
   const [hasItems, quantity] = useQuantity()
 
   const [navActive, setNavActive] = useState(false);
-  const [logoActive, setLogoActive] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -61,7 +60,7 @@ const Navigation = ({ siteTitle }) => {
         <StartContainer>
           < MenuLinkTitle to="/">
             <LogoImage alt="monks logo" src={BlackLogo} />
-          INNOVATION INSPIRED BY NATURE</MenuLinkTitle>
+          </MenuLinkTitle>
         </StartContainer>
       </Container>
 
@@ -71,29 +70,32 @@ const Navigation = ({ siteTitle }) => {
           {/* < MenuLinkTitle to="/about">About</MenuLinkTitle>
           {navActive && */}
           <NavListLarge>
-              <NavListItem>< MenuLinkTitle to="/about">About</MenuLinkTitle></NavListItem>
-              <NavListItem>< MenuLinkTitle to="/about">Los Angeles, California</MenuLinkTitle></NavListItem>
-              <NavListItem>< MenuLinkTitle to="https://www.instagram.com/monks/">@monks</MenuLinkTitle></NavListItem>
-              <NavListItem>< MenuLinkTitle to="/about">Subscribe to newsletter</MenuLinkTitle></NavListItem>
-              <NavListItem>< MenuLinkTitle to="/about">Terms & Shipping </MenuLinkTitle></NavListItem>
-              <NavListItem>{hasItems && <MenuLinkBag to="/cart"><>{`${quantity} — `}</>
+            <NavListItem>
+              < MenuLinkTitle to="/about">About</MenuLinkTitle>
+            </NavListItem>
+            <NavListItem>
+              < MenuLinkTitle to="https://www.instagram.com/monks/">@monks</MenuLinkTitle></NavListItem>
+            <NavListItem>
+              < MenuLinkTitle to="/about">Ingredients Glossary</MenuLinkTitle></NavListItem>
+            <NavListItem>{hasItems && <MenuLinkBag to="/cart"><>{`${quantity} — `}</>
                   Bag
             </MenuLinkBag>}
-              </NavListItem>
+            </NavListItem>
           </NavListLarge>
 
           <NavListSmall>
-              <NavListItem> < MenuLinkTitle to="/about">About</MenuLinkTitle></NavListItem>
-              <NavListItem>LA, Ca</NavListItem>
-              <NavListItem>@monks</NavListItem>
-              <NavListItem>Newsletter</NavListItem>
-              <NavListItem>T & S </NavListItem>
-              <NavListItem>{hasItems && <MenuLinkBag to="/cart"><>{`${quantity} — `}</>
+            <NavListItem>
+              < MenuLinkTitle to="/about">About</MenuLinkTitle>
+            </NavListItem>
+            <NavListItem>
+              < a href="https://www.instagram.com/monks/">@monks</a></NavListItem>
+            <NavListItem>
+              < MenuLinkTitle to="/about">Ingredients Glossary</MenuLinkTitle></NavListItem>
+            <NavListItem>{hasItems && <MenuLinkBag to="/cart"><>{`${quantity} — `}</>
                   Bag
             </MenuLinkBag>}
-              </NavListItem>
-          </NavListSmall>
-          {/*  <ThreeDotButton onClick={() => setNavActive(navActive => !navActive)}>...
+            </NavListItem>
+          </NavListSmall>          {/*  <ThreeDotButton onClick={() => setNavActive(navActive => !navActive)}>...
            </ThreeDotButton>
             </>
              :

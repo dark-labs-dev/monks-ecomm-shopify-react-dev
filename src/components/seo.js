@@ -16,7 +16,7 @@ function SEO({ description, lang, meta, keywords, title }) {
               lang,
             }}
             title={title}
-            titleTemplate={`monks | innovation inspired by nature`}
+            titleTemplate={`MONKS -Innovation Inspired by Nature`}
             // titleTemplate={`%s | ${data.site.siteMetadata.title}`}
             meta={[
               {

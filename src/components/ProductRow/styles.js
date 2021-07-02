@@ -6,13 +6,13 @@ export const GridRow = styled.div`
   gap: 5rem;
   margin:auto;
   margin-bottom: 5rem;
-  padding: 1rem  1rem 0 1rem;
+  padding: 1rem  0 0 0;
   max-width:910px;
   @media (max-width: ${breakpoints.l}px) {
-    padding: 1rem  1rem 0 1rem;
+    padding: 1rem  0 0 0;
   }
   @media (max-width: ${breakpoints.s}px) {
-    padding: 1rem  1rem 0 1rem;
+    padding: 1rem  0 0 0;
   }
 `
 

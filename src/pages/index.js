@@ -3,6 +3,7 @@ import React, { useEffect } from 'react'
 import SEO from '~/components/seo'
 import ProductGridRow from '~/components/ProductRow'
 import { UsePageDispatch } from '~/context/pageContext'
+import HeroImage from '../components/HeroImage'
 
 function PageCheck() {
   const PageDispatch = UsePageDispatch()
@@ -18,6 +19,7 @@ const IndexPage = () => (
   <>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <PageCheck />
+    <HeroImage />
     <ProductGridRow />
     {/* <Link to="/page-2/">Go to page 2</Link> */}
   </>

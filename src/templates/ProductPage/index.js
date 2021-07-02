@@ -65,19 +65,19 @@ const ProductPage = ({ data }) => {
 
           <GridRight>
             <InfoUi
-              title={'Info'}
+              title={'Description'}
               description={JSON.parse(product.description)["home"]}
               type='description'
             />
 
             <InfoUi
-              title={'Ingredients'}
+              title={'Notes'}
               description={(JSON.parse(product.description)["home"].ingredients)}
               type='list'
             />
 
             <InfoUi
-              title={'Application'}
+              title={'Ingredients'}
               description={(JSON.parse(product.description)["home"].application)}
               type='application'
             />

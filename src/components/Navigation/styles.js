@@ -9,7 +9,7 @@ export const Container = styled.div`
   justify-content: space-between;
   align-items: baseline;
   margin: 0 auto;
-  max-width: 1010px;
+  max-width: 910px;
   overflow-x:hidden;
   padding:1rem;
   justify-content: space-between;
@@ -29,22 +29,23 @@ export const MenuLink = styled(Link)`
   }
 `
 
+
 export const MenuLinkBag = styled(Link)`
   color:#fff;
   font-weight: bold;
   text-align:right;
   display:flex;
-  background:${colors.colorMagenta};
+  background:#000;
   padding:0 1rem;
   text-decoration: none;
-  border-left:solid .15rem #8A1B61;
-  border-right:solid .15rem #8A1B61;
-  border-bottom:solid .15rem #8A1B61;
+  border-left:solid .15rem #000;
+  border-right:solid .15rem #000;
+  border-bottom:solid .15rem #000;
   @media (max-width: ${breakpoints.s}px) {
   flex-direction: column;
   }
   &:hover {
-    color:${colors.colorMagenta};
+    color:#000;
     background:#fff;
   }
 `
@@ -57,7 +58,6 @@ flex-direction:column;
     color:black;
     margin:auto;
   @media (max-width: ${breakpoints.s}px) {
-    font-size:.6rem;
   }
   &:hover {
     color:black;
@@ -102,8 +102,8 @@ export const EndContainer = styled.div`
 `
 
 export const LogoImage = styled.img`
-  max-width:200px;
-  width:35vw;
+  max-width:225px;
+  width:38vw;
   margin:auto;
   padding:0 0 .5rem 0;
 `
