@@ -41,8 +41,10 @@ export const MenuLinkBag = styled(Link)`
   border-left:solid .15rem #000;
   border-right:solid .15rem #000;
   border-bottom:solid .15rem #000;
+  font-size:1.05rem;
   @media (max-width: ${breakpoints.s}px) {
-  flex-direction: column;
+      flex-direction: column;
+    font-size:.85rem;
   }
   &:hover {
     color:#000;
@@ -58,7 +60,7 @@ export const MenuLinkTitle = styled(Link)`
   text-weight:normal;
   color:black;
   margin:auto;
-  font-size:1.15rem;
+  font-size:1.05rem;
   @media (max-width: ${breakpoints.s}px) {
     font-size:.85rem;
   }

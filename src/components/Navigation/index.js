@@ -64,24 +64,24 @@ const Navigation = ({ siteTitle }) => {
           </MenuLinkTitle>
         </StartContainer>
 
-      <Wrapper >
-        <MidContainer>
-          <NavList>
-            <NavListItem>
-              < MenuLinkTitle to="/about">About</MenuLinkTitle>
-            </NavListItem>
-            <NavListItem>
-              < MenuLinkTitle to="https://www.instagram.com/monks/">@monks</MenuLinkTitle></NavListItem>
-            <NavListItem>
-              < MenuLinkTitle to="/about#ingredients">Ingredients Glossary</MenuLinkTitle></NavListItem>
-            <NavListItem>
-              {hasItems ? <MenuLinkBag to="/cart"><>{`${quantity} — `}</>
+        <Wrapper >
+          <MidContainer>
+            <NavList>
+              <NavListItem>
+                < MenuLinkTitle to="/about">About</MenuLinkTitle>
+              </NavListItem>
+              <NavListItem>
+                < MenuLinkTitle to="https://www.instagram.com/monks/">@monks</MenuLinkTitle></NavListItem>
+              <NavListItem>
+                < MenuLinkTitle to="/about#ingredients">Ingredients Glossary</MenuLinkTitle></NavListItem>
+              <NavListItem>
+                {hasItems ? <MenuLinkBag to="/cart"><>{`${quantity} — `}</>
                   Bag
             </MenuLinkBag> : <MenuLinkTitle to="/cart">Bag</MenuLinkTitle>}
-            </NavListItem>
-          </NavList>
-        </MidContainer>
-      </Wrapper >
+              </NavListItem>
+            </NavList>
+          </MidContainer>
+        </Wrapper >
       </Container>
     </>
   )

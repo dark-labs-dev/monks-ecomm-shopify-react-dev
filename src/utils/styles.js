@@ -126,7 +126,6 @@ export const Container = styled.div`
   align-content: center;
   flex-direction: column;
   @media (max-width: ${breakpoints.l}px) {
-    padding:0 1rem;
     // margin-top: 60vh;
   }
   @media (max-width: ${breakpoints.s}px) {

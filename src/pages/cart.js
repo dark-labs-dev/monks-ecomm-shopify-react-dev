@@ -4,6 +4,7 @@ import { UsePageDispatch, UsePageState } from '~/context/pageContext'
 
 import CartPage from '~/components/Cart'
 import { CartContainer } from '~/utils/styles'
+import Footer from '../components/footer'
 
 export default function Cart() {
   const { Page } = UsePageState()
@@ -18,6 +19,7 @@ export default function Cart() {
         <h1>Cart</h1>
         <CartPage />
       </CartContainer >
+      <Footer/>
     </>
   )
 }
